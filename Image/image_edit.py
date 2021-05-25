@@ -13,7 +13,6 @@ if not os.path.exists(out_folder):
 max_ratio = (100, 100)
 for item in os.listdir(image_folder):
     img = Image.open(f'{image_folder}{item}')
-    print(img)
     clean_name = os.path.splitext(item)[0]
     img.thumbnail(max_ratio)
     img.save(f'{out_folder}{clean_name}.png', 'png')
